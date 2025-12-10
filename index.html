@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ejercicio de tipografía fluida con clamp - UPDS">
+    <title>UPDS | Tipografía Fluid con Clamp</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/3050/3050529.png">
+</head>
+<body>
+    <!-- Encabezado fijo con logo UPDS y datos del estudiante -->
+    <header class="upds-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <div class="logo">
+                    <i class="fas fa-university"></i>
+                    <div class="logo-text">
+                        <span class="logo-title">UPDS</span>
+                        <span class="logo-subtitle">Universidad Privada Domingo Savio</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="student-info">
+                <div class="student-card">
+                    <div class="student-avatar">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="student-details">
+                        <h3 class="student-name">Maycol Robin</h3>
+                        <div class="student-data">
+                            <span class="student-id"><i class="fas fa-id-card"></i> ID: 12345678</span>
+                            <span class="student-career"><i class="fas fa-laptop-code"></i> Ingeniería de Sistemas</span>
+                            <span class="student-semester"><i class="fas fa-calendar-alt"></i> 5to Semestre</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Barra de navegación -->
+        <nav class="course-nav">
+            <div class="nav-container">
+                <ul class="nav-menu">
+                    <li><a href="#" class="active"><i class="fas fa-home"></i> Inicio</a></li>
+                    <li><a href="#"><i class="fas fa-book"></i> Tipografía</a></li>
+                    <li><a href="#"><i class="fas fa-ruler-combined"></i> CSS Clamp</a></li>
+                    <li><a href="#"><i class="fas fa-mobile-alt"></i> Responsive</a></li>
+                    <li><a href="#"><i class="fas fa-code"></i> Ejercicios</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="font-control" id="fontIncrease">
+                        <i class="fas fa-text-height"></i> A+
+                    </button>
+                    <button class="font-control" id="fontDecrease">
+                        <i class="fas fa-text-height"></i> A-
+                    </button>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Banner principal -->
+        <section class="hero-banner">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-highlight">Tipografía Responsive</span> Moderna
+                </h1>
+                <p class="hero-subtitle">
+                    Un sistema fluido usando <strong>CSS Clamp</strong> y <strong>Custom Properties</strong>
+                </p>
+                <div class="hero-badge">
+                    <span><i class="fas fa-check-circle"></i> Ejercicio Práctico</span>
+                    <span><i class="fas fa-user-graduate"></i> UPDS - Facultad de Ingeniería</span>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- Contenido principal -->
+        <article class="main-content">
+            <div class="content-header">
+                <h2>Introducción a la Fluidez Tipográfica</h2>
+                <div class="content-meta">
+                    <span class="publish-date"><i class="far fa-calendar"></i> Publicado: 15 Nov, 2023</span>
+                    <span class="content-category"><i class="fas fa-tag"></i> CSS Avanzado</span>
+                    <span class="content-difficulty"><i class="fas fa-signal"></i> Intermedio</span>
+                </div>
+            </div>
+            
+            <div class="content-body">
+                <p>
+                    Este párrafo demuestra el <strong class="highlight">cuerpo de texto fluido</strong>. 
+                    Si redimensionas la ventana del navegador, notarás que el tamaño de la fuente 
+                    no salta de un tamaño a otro (como pasaría con media queries tradicionales), 
+                    sino que escala matemáticamente gracias a la función <code class="code-block">clamp()</code>.
+                </p>
+
+                <div class="info-box">
+                    <h3><i class="fas fa-info-circle"></i> ¿Qué es CSS Clamp?</h3>
+                    <p>
+                        La función <code>clamp()</code> permite definir un valor que está sujeto a un límite superior e inferior, 
+                        con un valor preferido que fluye entre ellos. Es perfecta para crear diseños que se adaptan fluidamente 
+                        sin necesidad de múltiples media queries.
+                    </p>
+                </div>
+
+                <h3 class="section-title">Subtítulo de Nivel 3</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
+                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+
+                <div class="quote-container">
+                    <blockquote>
+                        <i class="fas fa-quote-left quote-icon"></i>
+                        <p class="quote-text">
+                            "La tipografía en la web debe ser flexible, no rígida. El control pixel-perfect es una ilusión."
+                        </p>
+                        <footer class="quote-author">
+                            <cite>— Experto en Diseño Web Responsive</cite>
+                        </footer>
+                    </blockquote>
+                </div>
+
+                <h4 class="section-subtitle">Subtítulo de Nivel 4</h4>
+                <p>
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore 
+                    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+                </p>
+
+                <!-- Ejemplo de código -->
+                <div class="code-example">
+                    <div class="code-header">
+                        <h4><i class="fas fa-code"></i> Ejemplo de Código</h4>
+                        <button class="copy-btn" onclick="copyCode()">
+                            <i class="far fa-copy"></i> Copiar
+                        </button>
+                    </div>
+                    <pre><code>:root {
+  /* Sistema fluido con clamp() */
+  --fs-body: clamp(1rem, 0.9rem + 0.5vw, 1.25rem);
+  --fs-h1: clamp(2rem, 1.5rem + 5vw, 3.5rem);
+  --fs-h2: clamp(1.5rem, 1.2rem + 3vw, 2.5rem);
+}</code></pre>
+                </div>
+
+                <!-- Demostración de tamaños -->
+                <div class="size-demo">
+                    <h4><i class="fas fa-text-height"></i> Demostración de Escalado</h4>
+                    <div class="size-items">
+                        <div class="size-item">
+                            <span class="size-label">Texto Pequeño</span>
+                            <p class="demo-text small">Este texto escala automáticamente</p>
+                        </div>
+                        <div class="size-item">
+                            <span class="size-label">Texto Normal</span>
+                            <p class="demo-text normal">Este texto escala automáticamente</p>
+                        </div>
+                        <div class="size-item">
+                            <span class="size-label">Texto Grande</span>
+                            <p class="demo-text large">Este texto escala automáticamente</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Sidebar con información adicional -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3><i class="fas fa-graduation-cap"></i> Datos del Curso</h3>
+                <ul class="course-details">
+                    <li><strong>Asignatura:</strong> Diseño Web Avanzado</li>
+                    <li><strong>Docente:</strong> Ing. Carlos Mendoza</li>
+                    <li><strong>Semestre:</strong> 5to</li>
+                    <li><strong>Horario:</strong> Lunes y Miércoles 19:00-21:00</li>
+                    <li><strong>Aula:</strong> Laboratorio 304</li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-card">
+                <h3><i class="fas fa-trophy"></i> Objetivos del Ejercicio</h3>
+                <ul class="objectives-list">
+                    <li><i class="fas fa-check"></i> Comprender la función clamp()</li>
+                    <li><i class="fas fa-check"></i> Implementar tipografía fluida</li>
+                    <li><i class="fas fa-check"></i> Crear variables CSS reutilizables</li>
+                    <li><i class="fas fa-check"></i> Mejorar la experiencia responsive</li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-card">
+                <h3><i class="fas fa-chart-line"></i> Progreso del Estudiante</h3>
+                <div class="progress-container">
+                    <div class="progress-item">
+                        <span>Ejercicios Completados</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%"></div>
+                        </div>
+                        <span class="progress-value">85%</span>
+                    </div>
+                    <div class="progress-item">
+                        <span>Asistencia</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 92%"></div>
+                        </div>
+                        <span class="progress-value">92%</span>
+                    </div>
+                    <div class="progress-item">
+                        <span>Promedio</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 88%"></div>
+                        </div>
+                        <span class="progress-value">88%</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer class="upds-footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <i class="fas fa-university footer-logo-icon"></i>
+                <div class="footer-logo-text">
+                    <h3>UPDS</h3>
+                    <p>Universidad Privada Domingo Savio</p>
+                </div>
+            </div>
+            
+            <div class="footer-info">
+                <p><i class="fas fa-map-marker-alt"></i> Av. Beni entre 2do y 3er anillo, Santa Cruz - Bolivia</p>
+                <p><i class="fas fa-phone"></i> +591 3 336-5555</p>
+                <p><i class="fas fa-envelope"></i> info@upds.edu.bo</p>
+            </div>
+            
+            <div class="footer-student">
+                <p><strong>Estudiante:</strong> Maycol Robin</p>
+                <p><strong>Carrera:</strong> Ingeniería de Sistemas</p>
+                <p><strong>Materia:</strong> Diseño Web Avanzado</p>
+                <p class="copyright">
+                    <i class="far fa-copyright"></i> 2023 UPDS - Todos los derechos reservados
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante para volver arriba -->
+    <button class="back-to-top" id="backToTop">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
